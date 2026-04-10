@@ -1,6 +1,6 @@
-# 🏦 FinSafe - Banking System Simulation
+# FinSafe - Banking System Simulation
 
-## 📖 Overview
+##Overview
 
 **FinSafe** is a robust console-based banking system simulation developed using Core Java. This application demonstrates fundamental banking operations while emphasizing secure transaction handling and data persistence through file-based storage.
 
@@ -10,25 +10,25 @@
 - Learning data persistence without databases
 - Practicing modular programming and clean code principles
 
-## ✨ Features
+## Features
 
 ### Core Banking Operations
-- **🔐 Account Management**
+- ** Account Management**
   - Create new accounts with unique account numbers
   - Secure login with username/password authentication
   - PIN-based transaction authorization
 
-- **💰 Financial Transactions**
+- **Financial Transactions**
   - Deposit funds with instant balance updates
   - Withdraw money with balance validation
   - Inter-account money transfers
   - Real-time balance inquiry
 
-- **📊 Transaction History**
+- **Transaction History**
   - Generate mini statements
   - View complete transaction history
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -39,7 +39,7 @@
 | **Java Time API** | Transaction timestamping |
 | **Collections Framework** | Data manipulation |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 FinSafe/
@@ -93,13 +93,6 @@ FinSafe/
 
 ## 🚀 Installation
 
-### Prerequisites
-- Java Development Kit (JDK) 8 or higher
-- Any Java IDE (IntelliJ IDEA, Eclipse, VS Code)
-- Git (optional, for version control)
-
-### Setup Instructions
-
 1. **Clone the repository**
 ```bash
 git clone https://github.com/yourusername/FinSafe.git
@@ -115,8 +108,6 @@ javac -d . src/main/java/app/*.java src/main/java/service/*.java src/main/java/u
 ```bash
 java app.BankApp
 ```
-
-## 💻 Usage
 
 ### Getting Started
 
@@ -170,24 +161,19 @@ java app.BankApp
 
 ## 📄 File Structure
 
-### users.txt Format
-```
-username,password,pin,accountNumber,balance
-```
-**Example:**
-```
-marimuthu,2004,2004,2212071,1000.0
-vasanth,2005,2005,2212106,500.0
-```
+## 📊 Sample Data
 
-### data.txt Format
-```
-accountNumber,transactionType,amount,balance,timestamp
-```
-**Example:**
-```
-2212071,Credit,1000.0,1000.0,2026-04-09T23:18
-2212106,Debit,500.0,500.0,2026-04-09T23:20
+### Test Accounts
+| Username | Password | PIN | Account Number | Initial Balance |
+|----------|----------|-----|----------------|-----------------|
+| marimuthu | 2004 | 2004 | 2212071 | 1000.0 |
+| vasanth | 2005 | 2005 | 2212106 | 500.0 |
+
+### Sample Transactions
+| Account | Type | Amount | New Balance | Timestamp |
+|---------|------|--------|-------------|-----------|
+| 2212071 | Credit | 1000.0 | 1000.0 | 2026-04-09T23:18 |
+| 2212106 | Debit | 500.0 | 500.0 | 2026-04-09T23:20 |
 ```
 
 ## 📚 API Documentation
@@ -224,20 +210,3 @@ accountNumber,transactionType,amount,balance,timestamp
   - Level 2: PIN verification for financial transactions
 - **Secure Operations**: Every sensitive operation is protected by PIN verification to prevent unauthorized transactions
 
-## 📊 Sample Data
-
-### Test Accounts
-| Username | Password | PIN | Account Number | Initial Balance |
-|----------|----------|-----|----------------|-----------------|
-| marimuthu | 2004 | 2004 | 2212071 | 1000.0 |
-| vasanth | 2005 | 2005 | 2212106 | 500.0 |
-
-### Sample Transactions
-| Account | Type | Amount | New Balance | Timestamp |
-|---------|------|--------|-------------|-----------|
-| 2212071 | Credit | 1000.0 | 1000.0 | 2026-04-09T23:18 |
-| 2212106 | Debit | 500.0 | 500.0 | 2026-04-09T23:20 |
-
----
-
-**Note**: This is an educational project designed for learning purposes. It demonstrates basic banking operations and file handling in Java. For production use, proper database integration and enhanced security measures would be required.
