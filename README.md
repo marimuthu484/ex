@@ -1,6 +1,6 @@
 # FinSafe - Banking System Simulation
 
-##Overview
+Overview
 
 **FinSafe** is a robust console-based banking system simulation developed using Core Java. This application demonstrates fundamental banking operations while emphasizing secure transaction handling and data persistence through file-based storage.
 
@@ -13,18 +13,18 @@
 ## Features
 
 ### Core Banking Operations
-- ** Account Management**
+- Account Management
   - Create new accounts with unique account numbers
   - Secure login with username/password authentication
   - PIN-based transaction authorization
 
-- **Financial Transactions**
+- Financial Transactions
   - Deposit funds with instant balance updates
   - Withdraw money with balance validation
   - Inter-account money transfers
   - Real-time balance inquiry
 
-- **Transaction History**
+- Transaction History
   - Generate mini statements
   - View complete transaction history
 
@@ -91,7 +91,7 @@ FinSafe/
 - Manages data persistence
 - Handles file reading/writing exceptions
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**
 ```bash
@@ -117,7 +117,6 @@ java app.BankApp
 
 2. **Create an Account**
    ```
-   ========== WELCOME TO FINSAFE BANKING ==========
    1. Sign Up
    2. Login
    3. Exit
@@ -148,7 +147,7 @@ java app.BankApp
    Choose option: 
    ```
 
-## 🏗 System Architecture
+## System Architecture
 
 ### How It Works
 1. **User Registration**: New users sign up by providing username, password, PIN, and account number
@@ -159,9 +158,9 @@ java app.BankApp
 6. **Transaction Recording**: All transactions are logged in `data.txt` with timestamps
 7. **Balance Updates**: Account balance is automatically updated after each transaction
 
-## 📄 File Structure
+##  File Structure
 
-## 📊 Sample Data
+## Sample Data
 
 ### Test Accounts
 | Username | Password | PIN | Account Number | Initial Balance |
@@ -174,39 +173,18 @@ java app.BankApp
 |---------|------|--------|-------------|-----------|
 | 2212071 | Credit | 1000.0 | 1000.0 | 2026-04-09T23:18 |
 | 2212106 | Debit | 500.0 | 500.0 | 2026-04-09T23:20 |
-```
 
-## 📚 API Documentation
+## Security Features
 
-### AuthService Methods
+## Authentication System
+- User Registration & Login: All user credentials (username, password, PIN, account number) are securely stored in 'users.txt' file
+- Password Protection: Each account is protected with a unique password for login authentication
+- File-Based Storage: User authentication data is persisted in text files for simplicity and learning purposes
 
-| Method | Description | Parameters | Returns |
-|--------|-------------|------------|---------|
-| `signUp()` | Registers new user | username, password, pin, accountNo | boolean |
-| `login()` | Authenticates user | username, password | boolean |
-| `validatePIN()` | Verifies transaction PIN | accountNo, pin | boolean |
-
-### BankService Methods
-
-| Method | Description | Parameters | Returns |
-|--------|-------------|------------|---------|
-| `deposit()` | Adds funds to account | accountNo, amount, pin | boolean |
-| `withdraw()` | Removes funds from account | accountNo, amount, pin | boolean |
-| `transfer()` | Transfers between accounts | fromAccount, toAccount, amount, pin | boolean |
-| `checkBalance()` | Gets current balance | accountNo | double |
-| `getMiniStatement()` | Retrieves recent transactions | accountNo | List<Transaction> |
-
-## 🔒 Security Features
-
-### Authentication System
-- **User Registration & Login**: All user credentials (username, password, PIN, account number) are securely stored in `users.txt` file
-- **Password Protection**: Each account is protected with a unique password for login authentication
-- **File-Based Storage**: User authentication data is persisted in text files for simplicity and learning purposes
-
-### Transaction Security
-- **PIN Verification**: All banking operations (deposit, withdraw, transfer) require PIN authentication
-- **Dual-Layer Security**: System implements two levels of security:
+## Transaction Security
+- PIN Verification: All banking operations (deposit, withdraw, transfer) require PIN authentication
+- Dual-Layer Security: System implements two levels of security:
   - Level 1: Username/Password for account access
   - Level 2: PIN verification for financial transactions
-- **Secure Operations**: Every sensitive operation is protected by PIN verification to prevent unauthorized transactions
+- Secure Operations: Every sensitive operation is protected by PIN verification to prevent unauthorized transactions
 
